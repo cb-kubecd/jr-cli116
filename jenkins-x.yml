@@ -3,10 +3,8 @@ pipelineConfig:
   pipelines:
     release:
       pipeline:
-        stages:
-          - name: foo
-            options:
-              containerOptions:
-                volumeMounts:
-                - mountPath: /var/build-secrets/knative-git-user-pass
-                  name: secret-volume-knative-git-user-pass-fj2tb
+        options: 
+          containerOptions:
+            volumeMounts:
+              - mountPath: /var/build-secrets/knative-git-user-pass
+                name: secret-volume-knative-git-user-pass-fj2tb
